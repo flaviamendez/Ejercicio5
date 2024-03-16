@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.pr2</groupId>
+    <artifactId>libreta-contactos</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <name>Libreta de Contactos</name>
+    <!-- Cambia la URL del proyecto -->
+    <url>http://www.ejemplo.com/libreta-contactos</url>
+
+    <properties>
+        <!-- Cambia la versión del compilador de Java a 1.8 -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <aplicacion>org.pr2.App</aplicacion>
+    </properties>
+
+    <dependencies>
+        <!-- Otras dependencias -->
+        <!-- Agrega aquí tus dependencias -->
+    </dependencies>
+
+    <build>
+        <!-- Gestión de plugins -->
+        <pluginManagement>
+            <!-- Lock down plugins versions to avoid using Maven defaults -->
+            <plugins>
+                <plugin>
+                    <artifactId>maven-assembly-plugin</artifactId>
+                    <configuration>
+                        <archive>
+                            <manifest>
+                                <mainClass>${aplicacion}</mainClass>
+                            </manifest>
+                        </archive>
+                        <descriptorRefs>
+                            <descriptorRef>jar-with-dependencies</descriptorRef>
+                        </descriptorRefs>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+</project>
